@@ -42,6 +42,6 @@ public class LogHelper {
     }
 
     public  static void reportCrash(Exception e){
-        FirebaseCrash.report(e);
+//        FirebaseCrash.report(e);
     }
 }

@@ -18,9 +18,9 @@ import retrofit2.http.Query;
 
 public interface RequestInterface {
     //1. discover movie https://api.themoviedb.org/3/discover/movie?api_key=ab52bf6ff8ba7e3511c4b8ace26441f7&language=zh&sort_by=release_date.desc&include_adult=false&include_video=false&page=2&primary_release_date.gte
-    @GET(Constants.URL_MOVIE_BASE)
+    @GET(Constants.PATH_MOVIE_DISCOVER)
     Observable<MovieDiscoverResponse> discoverMovie(@Query("api_key") String apiKey, @Query("sort_by") String sortBy, @Query("include_video") boolean includeVideo
-            , @Query("primary_release_date.gte") String dateGreaterThanEqual,@Query("primary_release_date.lte") String dateLessThanEqual,@Query("page") int page);
+            , @Query("primary_release_date.gte") String dateGreaterThanEqual,@Query("primary_release_date.lte") String dateLessThanEqual, @Query("language") String language,@Query("page") int page);
 
     //1-1. discover movie https://api.themoviedb.org/3/discover/movie?api_key=ab52bf6ff8ba7e3511c4b8ace26441f7&language=zh&sort_by=release_date.desc&include_adult=false&include_video=false&page=2&primary_release_date.gte
     @GET(Constants.PATH_MOVIE_DISCOVER)

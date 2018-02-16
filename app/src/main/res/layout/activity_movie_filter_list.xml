@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_no_logo_android"
+    tools:context="evahsu.simplemovieapi.ui.MovieFilterListActivity">
+    <TextView
+        android:id="@+id/movie_filter_list_gte_date_filter"
+        android:layout_width="@dimen/list_movie_filter_date_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/list_movie_filter_date_margin"
+        android:layout_marginTop="@dimen/list_movie_filter_date_margin"
+        android:text="@string/gte_date_hine"
+        android:background="@drawable/activated_gray_bg"
+        android:paddingBottom="@dimen/list_movie_filter_date_padding_top"
+        android:paddingLeft="@dimen/list_movie_filter_date_padding_left"
+        android:paddingRight="@dimen/list_movie_filter_date_padding_left"
+        android:paddingTop="@dimen/list_movie_filter_date_padding_top"
+        style="@style/ListItemText12Style" />
+    <TextView
+        android:id="@+id/movie_filter_list_lte_date_filter"
+        android:layout_width="@dimen/list_movie_filter_date_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/list_movie_filter_date_margin"
+        android:layout_marginTop="@dimen/list_movie_filter_date_margin"
+        android:text="@string/lte_date_hine"
+        android:background="@drawable/activated_gray_bg"
+        android:paddingBottom="@dimen/list_movie_filter_date_padding_top"
+        android:paddingLeft="@dimen/list_movie_filter_date_padding_left"
+        android:paddingRight="@dimen/list_movie_filter_date_padding_left"
+        android:paddingTop="@dimen/list_movie_filter_date_padding_top"
+        android:layout_toRightOf="@+id/movie_filter_list_gte_date_filter"
+        style="@style/ListItemText12Style" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/movie_filter_list_recyclerView"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/list_movie_filter_date_margin"
+        android:layout_below="@+id/movie_filter_list_gte_date_filter">
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>

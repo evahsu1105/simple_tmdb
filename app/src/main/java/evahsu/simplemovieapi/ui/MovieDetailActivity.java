@@ -47,6 +47,7 @@ public class MovieDetailActivity extends AppCompatActivity {
     @BindView(R.id.movie_detail_overview) TextView tvOverView;
     @BindView(R.id.movie_detail_cast_label) TextView tvCastLabel;
     @BindView(R.id.state_block1_oil_green_line) ImageView ivRateLine;
+    @BindView(R.id.state_block1_oil_green_line_whole) ImageView ivRateLineWhole;
     @BindView(R.id.movie_detail_cast_list) RecyclerView rcCastList;
     private TagAdapter tagAdapter;
     private CastAdapter castAdapter;
@@ -122,9 +123,24 @@ public class MovieDetailActivity extends AppCompatActivity {
                 tvOverView.setText(resp.getOverview());
                 tvReleaseDate.setText(Util.getString(getApplicationContext(),R.string.release_date,String.valueOf(resp.getRelease_date())));
                 tvRunTime.setText(getRuntimeText(resp.getRuntime()));
-                tvRate.setText(Util.getString(getApplicationContext(),R.string.rate,String.valueOf(resp.getVote_average())));
-                int px = Util.dpToPx(getApplicationContext(),105.3f);
-                ivRateLine.getLayoutParams().width = (int)(px * resp.getVote_average() / 10);
+
+                if(resp.getVote_average() == 10){
+                    ivRateLineWhole.setVisibility(View.VISIBLE);
+                    ivRateLine.setVisibility(View.GONE);
+                }else{
+                    ivRateLineWhole.setVisibility(View.GONE);
+                    ivRateLine.setVisibility(View.VISIBLE);
+                    int px = Util.dpToPx(getApplicationContext(),105.3f);
+                    ivRateLine.getLayoutParams().width = (int)(px * resp.getVote_average() / 10);
+                }
+
+
+                if(resp.getVote_count() > 0){
+                    tvRate.setText(Util.getString(getApplicationContext(),R.string.rate,String.valueOf(resp.getVote_average())));
+                }else{
+                    tvRate.setText(Util.getString(getApplicationContext(),R.string.rate_unavailable));
+                }
+
                 tagAdapter.onlyAddAll(resp.getGenres());
                 tagAdapter.notifyDataSetChanged();
                 if(resp.getCredits().getCast().isEmpty()){
@@ -134,6 +150,8 @@ public class MovieDetailActivity extends AppCompatActivity {
                     tvCastLabel.setText(R.string.cast);
                     castAdapter.setData(resp.getCredits().getCast());
                 }
+
+
                 castAdapter.notifyDataSetChanged();
 
             }catch (Exception e){

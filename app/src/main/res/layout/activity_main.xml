@@ -3,11 +3,31 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_no_logo_android"
     tools:context="${relativePackage}.${activityClass}">
 
-    <evahsu.simplemovieapi.uicomponent.viewerpager.LockableViewPager
-        android:id="@+id/movie_list_main_pager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </evahsu.simplemovieapi.uicomponent.viewerpager.LockableViewPager>
+    <TextView
+        android:id="@+id/main_now_showing"
+        android:layout_width="@dimen/list_movie_filter_date_width"
+        android:layout_height="@dimen/list_movie_filter_date_width"
+        android:layout_marginTop="@dimen/list_movie_filter_date_margin"
+        android:layout_marginLeft="@dimen/list_movie_filter_date_margin"
+        android:layout_marginRight="@dimen/list_movie_filter_date_margin"
+        android:text="@string/now_showing"
+        android:background="@drawable/activated_gray_bg"
+        android:gravity="center"
+
+        style="@style/ListItemText15Style" />
+    <TextView
+        android:id="@+id/main_by_date"
+        android:layout_width="@dimen/list_movie_filter_date_width"
+        android:layout_height="@dimen/list_movie_filter_date_width"
+        android:layout_marginRight="@dimen/list_movie_filter_date_margin"
+        android:layout_marginTop="@dimen/list_movie_filter_date_margin"
+        android:text="@string/discover_by_date"
+        android:background="@drawable/activated_gray_bg"
+        android:gravity="center"
+        style="@style/ListItemText15Style" />
 </LinearLayout>

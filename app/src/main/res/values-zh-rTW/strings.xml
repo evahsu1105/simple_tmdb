@@ -6,6 +6,9 @@
     <string name="runtime">片長: %1$s 分鐘</string>
     <string name="runtime_unavailable">片長: NA</string>
     <string name="rate">評比: %1$s</string>
+    <string name="rate_unavailable">評比: NA</string>
     <string name="no_more_to_load">已無更多資料可載入</string>
     <string name="cast">演員</string>
+    <string name="gte_date_hine">起始日期: %1$s</string>
+    <string name="lte_date_hine">結束日期: %1$s</string>
 </resources>

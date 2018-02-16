@@ -79,6 +79,16 @@
         android:src="@drawable/state_gray_line"
         android:layout_marginTop="@dimen/state_oil_line_margin_top"/>
     <ImageView
+        android:id="@+id/state_block1_oil_green_line_whole"
+        android:visibility="gone"
+        android:layout_width="@dimen/state_oil_line_width"
+        android:layout_height="@dimen/state_oil_line_height"
+        android:layout_below="@+id/movie_detail_runtime"
+        android:layout_toRightOf="@+id/movie_detail_vote_average"
+        android:layout_marginLeft="@dimen/state_oil_text_margin_left"
+        android:src="@drawable/state_green_line_whole"
+        android:layout_marginTop="@dimen/state_oil_line_margin_top"/>
+    <ImageView
         android:id="@+id/state_block1_oil_green_line"
         android:layout_width="@dimen/state_oil_line_width"
         android:layout_height="@dimen/state_oil_line_height"

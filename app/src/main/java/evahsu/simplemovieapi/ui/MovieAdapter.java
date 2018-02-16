@@ -63,6 +63,12 @@ public class MovieAdapter extends RecyclerView.Adapter {
         this.lastRequestPages = lastRequestPages;
     }
 
+    public void resetPages(){
+        totalPages = 0;
+        lastRequestPages = 0;
+        lastFinishRequestPages = 0;
+    }
+
     public int getLastFinishRequestPages() {
         return lastFinishRequestPages;
     }
@@ -71,6 +77,9 @@ public class MovieAdapter extends RecyclerView.Adapter {
         this.lastFinishRequestPages = lastFinishRequestPages;
     }
 
+    public void clearData() {
+        list.clear();
+    }
     public void addData(ArrayList<Result> list) {
         if(list == null){
             return;

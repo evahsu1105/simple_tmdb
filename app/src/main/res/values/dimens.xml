@@ -129,6 +129,12 @@
     <dimen name="message_unread_text_margin_left">8dp</dimen>
     <dimen name="message_unread_title_margin_top">10dp</dimen>
     <dimen name="list_movie_overview_margin_top">6dp</dimen>
+    <dimen name="list_movie_filter_date_width">150dp</dimen>
+    <dimen name="list_movie_filter_date_height">20dp</dimen>
+    <dimen name="list_movie_filter_date_padding_top">5dp</dimen>
+    <dimen name="list_movie_filter_date_padding_left">5dp</dimen>
+    <dimen name="list_movie_filter_date_margin">10dp</dimen>
+    <dimen name="list_movie_title_max_width">220dp</dimen>
     <dimen name="list_cast_char_margin_top">2dp</dimen>
     <dimen name="message_unread_date_margin_top">12dp</dimen>
 

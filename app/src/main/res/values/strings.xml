@@ -9,6 +9,11 @@
     <string name="runtime">Duration: %1$s minutes</string>
     <string name="runtime_unavailable">Duration: NA</string>
     <string name="rate">Rate: %1$s</string>
+    <string name="rate_unavailable">Rate: NA</string>
     <string name="no_more_to_load">No more data to load</string>
     <string name="cast">Cast</string>
+    <string name="gte_date_hine">Start Date: %1$s</string>
+    <string name="lte_date_hine">End Date: %1$s</string>
+    <string name="now_showing">Now Showing</string>
+    <string name="discover_by_date">By Date</string>
 </resources>
