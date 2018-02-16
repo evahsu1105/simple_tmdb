@@ -19,7 +19,7 @@ public class Constants {
     public final static String APPEND_TO_REQUEST_CREDITS = "credits";
 
 
-    public final static String MOVIE_API_KEY = "ab52bf6ff8ba7e3511c4b8ace26441f7";
+    public final static String MOVIE_API_KEY = "abf752bf6ff64418ba7e3511c4bce222";
     public final static String VALUE_SORT_RELEASE_DATE_DESC = "release_date.desc";
     public final static String PATH_JSON = "json";
     public final static int ORAGNE_SIGN = 1;
