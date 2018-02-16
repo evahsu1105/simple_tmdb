@@ -1,4 +1,3 @@
 # simple_tmdb
 a simple app which using tmdb API
-![Preview1 List](https://github.com/evahsu1105/simple_tmdb/blob/master/screenshot_movie_list.png|width=250)
-![Preview2](https://github.com/evahsu1105/simple_tmdb/blob/master/screen_movie_detail.png|width=250)
+![Preview](https://github.com/evahsu1105/simple_tmdb/blob/master/preivew1.png)
