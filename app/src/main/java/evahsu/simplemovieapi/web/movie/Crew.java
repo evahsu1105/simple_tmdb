@@ -6,11 +6,11 @@ package evahsu.simplemovieapi.web.movie;
 
 public class Crew {
 
-    public String credit_id;
-    public String department;
-    public int gender;
-    public int id;
-    public String job;
-    public String name;
-    public Object profile_path;
+    private String credit_id;
+    private String department;
+    private int gender;
+    private int id;
+    private String job;
+    private String name;
+    private Object profile_path;
 }

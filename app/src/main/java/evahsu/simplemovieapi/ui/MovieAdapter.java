@@ -27,6 +27,7 @@ public class MovieAdapter extends RecyclerView.Adapter {
     public final String TAG = this.getClass().getSimpleName();
     private ArrayList<Result> list = new ArrayList<>();
     private Context context;
+    //for loadmore
     private int totalPages = 0;
     private int lastRequestPages = 0;
     private int lastFinishRequestPages = 0;
@@ -104,7 +105,6 @@ public class MovieAdapter extends RecyclerView.Adapter {
                 .placeholder(R.drawable.empty_icon)
                 .error(R.drawable.btn_no_entry)
                 .into(readViewHolder.posterImageView);
-//        readViewHolder.stateIcon.setImageResource(listItem.getStatIconId());
     }
     @Override
     public int getItemCount() {

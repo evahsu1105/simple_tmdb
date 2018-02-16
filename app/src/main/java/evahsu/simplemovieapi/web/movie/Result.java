@@ -7,20 +7,20 @@ import java.util.List;
  */
 
 public class Result {
-    public Integer vote_count;
-    public Integer id;
-    public Boolean video;
-    public double vote_average;
-    public String title;
-    public Double popularity;
-    public String poster_path;
-    public String original_language;
-    public String original_title;
-    public List<Integer> genre_ids = null;
-    public Object backdrop_path;
-    public Boolean adult;
-    public String overview;
-    public String release_date;
+    private Integer vote_count;
+    private Integer id;
+    private Boolean video;
+    private double vote_average;
+    private String title;
+    private Double popularity;
+    private String poster_path;
+    private String original_language;
+    private String original_title;
+    private List<Integer> genre_ids = null;
+    private Object backdrop_path;
+    private Boolean adult;
+    private String overview;
+    private String release_date;
 
     public Integer getVote_count() {
         return vote_count;

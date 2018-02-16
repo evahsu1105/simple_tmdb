@@ -39,8 +39,7 @@ import retrofit2.Retrofit;
 public class MovieDetailActivity extends AppCompatActivity {
 
     @BindView(R.id.movie_detail_img) ImageView ivPoster;
-    @BindView(R.id.movie_detail_title)
-    TextView tvTitle;
+    @BindView(R.id.movie_detail_title) TextView tvTitle;
     @BindView(R.id.movie_detail_genres) FlowTagLayout flowTagGenres;
     @BindView(R.id.movie_detail_date) TextView tvReleaseDate;
     @BindView(R.id.movie_detail_runtime) TextView tvRunTime;
@@ -53,7 +52,6 @@ public class MovieDetailActivity extends AppCompatActivity {
     private CastAdapter castAdapter;
     private GetMovieDetailObserverListener getMovieDetailObserverListener = new GetMovieDetailObserverListener();
     private InnerObjectKeyRecyclerViewListener innerObjectKeyRecyclerViewListener = new InnerObjectKeyRecyclerViewListener();
-//    @BindView(R.id.movie_detail_runtime) ImageView ivPoster;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,12 +68,6 @@ public class MovieDetailActivity extends AppCompatActivity {
 
         flowTagGenres.setTagCheckedMode(FlowTagLayout.FLOW_TAG_CHECKED_NONE);
         flowTagGenres.setAdapter(tagAdapter);
-//        flowTagGenres.setOnTagSelectListener(new OnTagSelectListener() {
-//            @Override
-//            public void onItemSelect(FlowTagLayout parent, List<Integer> selectedList) {
-//
-//            }
-//        });
     }
 
     private void initRecyclerView(){
@@ -97,10 +89,8 @@ public class MovieDetailActivity extends AppCompatActivity {
             return;
         }
 
-        Retrofit retrofit = WebUtil.getRetrofitRxJava(Constants.DEFAULT_TIME_OUT,Constants.URL_MOVIE_BASE, true,"getMovieList");
+        Retrofit retrofit = WebUtil.getRetrofitRxJava(Constants.DEFAULT_TIME_OUT,Constants.URL_MOVIE_BASE, true,"getMovieDetail");
         RequestInterface requestInterface = retrofit.create(RequestInterface.class);
-//        messageAdapter.setLastKeyForPosition("");//抓全部就允許移動list position
-//        requestInterface.discoverMovie(Constants.MOVIE_API_KEY,Constants.VALUE_SORT_RELEASE_DATE_DESC,false,Util.getCurrentDateText(),1)
         requestInterface.movieDetail(id,Constants.MOVIE_API_KEY, getResources().getConfiguration().locale.toLanguageTag(),Constants.APPEND_TO_REQUEST_CREDITS)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -137,7 +127,7 @@ public class MovieDetailActivity extends AppCompatActivity {
                 ivRateLine.getLayoutParams().width = (int)(px * resp.getVote_average() / 10);
                 tagAdapter.onlyAddAll(resp.getGenres());
                 tagAdapter.notifyDataSetChanged();
-                if(resp.getCredits().cast.isEmpty()){
+                if(resp.getCredits().getCast().isEmpty()){
                     tvCastLabel.setText("");
                     castAdapter.clearData();
                 }else{
@@ -148,7 +138,7 @@ public class MovieDetailActivity extends AppCompatActivity {
 
             }catch (Exception e){
                 Util.showShortToast(getBaseContext(),R.string.system_is_busy);
-                LogHelper.logToCloud(String.format("getPushList_fail |%s", e.getMessage()));
+                LogHelper.logToCloud(String.format("getMovieDetail_fail |%s", e.getMessage()));
                 LogHelper.reportCrash(e);
             }
         }
@@ -168,8 +158,6 @@ public class MovieDetailActivity extends AppCompatActivity {
 
         @Override
         public boolean onItemLongClick(int key, Object bean) {
-//            DialogHandler.showAlertDialog(getActivity(),simpleListItem.getContent(),null);
-//            LuxgenUtils.showShortToast(getContext(),String.format("%s long clicked",simpleListItem.getTitle()));
             return true;
         }
     }

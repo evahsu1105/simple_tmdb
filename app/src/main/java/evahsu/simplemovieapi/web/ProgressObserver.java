@@ -66,7 +66,6 @@ public class ProgressObserver<T> implements Observer<T>, ProgressCancelListener 
 
     @Override
     public void onCancelProgress() {
-        //如果处于订阅状态，则取消订阅
         if (!d.isDisposed()) {
             d.dispose();
             listener.onError();

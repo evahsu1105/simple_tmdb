@@ -5,14 +5,14 @@ package evahsu.simplemovieapi.web.movie;
  */
 
 public class Cast {
-    public int cast_id;
-    public String character;
-    public String credit_id;
-    public int gender;
-    public int id;
-    public String name;
-    public int order;
-    public String profile_path;
+    private int cast_id;
+    private String character;
+    private String credit_id;
+    private int gender;
+    private int id;
+    private String name;
+    private int order;
+    private String profile_path;
 
     public int getCast_id() {
         return cast_id;

@@ -7,32 +7,32 @@ import java.util.List;
  */
 
 public class MovieDetailResponse {
-    public boolean adult;
-    public String backdrop_path;
-    public BelongsToCollection belongs_to_collection;
-    public int budget;
-    public List<Genre> genres = null;
-    public String homepage;
-    public int id;
-    public String imdb_id;
-    public String original_language;
-    public String original_title;
-    public String overview;
-    public double popularity;
-    public String poster_path;
-    public List<Object> production_companies = null;
-    public List<Object> production_countries = null;
-    public String release_date;
-    public int revenue;
-    public int runtime;
-    public List<SpokenLanguage> spoken_languages = null;
-    public String status;
-    public String tagline;
-    public String title;
-    public boolean video;
-    public double vote_average;
-    public int vote_count;
-    public Credits credits;
+    private boolean adult;
+    private String backdrop_path;
+    private BelongsToCollection belongs_to_collection;
+    private int budget;
+    private List<Genre> genres = null;
+    private String homepage;
+    private int id;
+    private String imdb_id;
+    private String original_language;
+    private String original_title;
+    private String overview;
+    private double popularity;
+    private String poster_path;
+    private List<Object> production_companies = null;
+    private List<Object> production_countries = null;
+    private String release_date;
+    private int revenue;
+    private int runtime;
+    private List<SpokenLanguage> spoken_languages = null;
+    private String status;
+    private String tagline;
+    private String title;
+    private boolean video;
+    private double vote_average;
+    private int vote_count;
+    private Credits credits;
 
     public boolean isAdult() {
         return adult;

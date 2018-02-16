@@ -51,17 +51,11 @@ public class TagAdapter<T> extends BaseAdapter implements OnInitSelectedPosition
         T t = mDataList.get(position);
 
         if (t instanceof Genre) {
-            textView.setText(((Genre) t).name);
+            textView.setText(((Genre) t).getName());
         }else if (t instanceof String) {
             textView.setText((String) t);
         }
         return view;
-    }
-    public String getTagText(String tag){
-        return tag;
-    }
-    public String getTagText(Genre genre){
-        return genre.name;
     }
     public void onlyAddAll(List<T> datas) {
         mDataList.addAll(datas);

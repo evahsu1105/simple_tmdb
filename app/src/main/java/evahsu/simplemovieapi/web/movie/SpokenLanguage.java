@@ -6,6 +6,6 @@ package evahsu.simplemovieapi.web.movie;
 
 public class SpokenLanguage {
 
-    public String iso_639_1;
-    public String name;
+    private String iso_639_1;
+    private String name;
 }

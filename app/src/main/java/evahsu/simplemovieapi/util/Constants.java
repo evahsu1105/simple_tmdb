@@ -7,15 +7,12 @@ import android.graphics.Color;
  */
 
 public class Constants {
-    public final static boolean SHOW_LOG_LIFE_CYCLE = true;
     public final static String URL_MOVIE_BASE = "https://api.themoviedb.org/3/";
     public final static String URL_POSTER_BASE = "https://image.tmdb.org/t/p/w500";
     public final static String PATH_MOVIE_DISCOVER = "discover/movie";
     public final static String PATH_MOVIE_DETAIL = "movie/{id}";
     public final static String PATH_MOVIE_NOW_PLAYING = "movie/now_playing";
     public final static String EXTRA_MOVID_ID = "extra_movie_id";
-    public final static String LANGUAGE_EN_US = "en-US";
-    public final static String LANGUAGE_ZH_TW = "zh-TW";
     public final static String APPEND_TO_REQUEST_CREDITS = "credits";
 
 

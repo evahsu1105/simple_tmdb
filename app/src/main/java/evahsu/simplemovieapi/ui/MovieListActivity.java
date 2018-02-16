@@ -59,8 +59,6 @@ public class MovieListActivity extends AppCompatActivity {
         }
         Retrofit retrofit = WebUtil.getRetrofitRxJava(Constants.DEFAULT_TIME_OUT,Constants.URL_MOVIE_BASE, true,"getMovieList");
         RequestInterface requestInterface = retrofit.create(RequestInterface.class);
-//        messageAdapter.setLastKeyForPosition("");//抓全部就允許移動list position
-//        requestInterface.discoverMovie(Constants.MOVIE_API_KEY,Constants.VALUE_SORT_RELEASE_DATE_DESC,false,Util.getCurrentDateText(),1)
         requestInterface.nowPlayingMovie(Constants.MOVIE_API_KEY,getResources().getConfiguration().locale.toLanguageTag(),movieAdapter.getNextLastRequestPages())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -104,13 +102,13 @@ public class MovieListActivity extends AppCompatActivity {
                     Util.showShortToast(getBaseContext(),R.string.system_is_busy);
                     return;
                 }
-                movieAdapter.addData(resp.results);
-                movieAdapter.setTotalPages(resp.total_pages);
+                movieAdapter.addData(resp.getResults());
+                movieAdapter.setTotalPages(resp.getTotal_pages());
                 movieAdapter.setLastFinishRequestPages(movieAdapter.getLastRequestPages());
                 movieAdapter.notifyDataSetChanged();
             }catch (Exception e){
                 Util.showShortToast(getBaseContext(),R.string.system_is_busy);
-                LogHelper.logToCloud(String.format("getPushList_fail |%s", e.getMessage()));
+                LogHelper.logToCloud(String.format("getMovieList_fail |%s", e.getMessage()));
                 LogHelper.reportCrash(e);
             }
         }

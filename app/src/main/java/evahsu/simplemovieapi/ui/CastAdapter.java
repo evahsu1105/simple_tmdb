@@ -27,9 +27,6 @@ public class CastAdapter extends RecyclerView.Adapter {
     public final String TAG = this.getClass().getSimpleName();
     private ArrayList<Cast> list = new ArrayList<>();
     private Context context;
-//    public MovieAdapter(ArrayList<Result> list) {
-//        this.list = list;
-//    }
 
     public CastAdapter(Context context) {
         this.context = context;
@@ -72,7 +69,6 @@ public class CastAdapter extends RecyclerView.Adapter {
                 .placeholder(R.drawable.empty_icon)
                 .error(R.drawable.btn_no_entry)
                 .into(readViewHolder.profileImageView);
-//        readViewHolder.stateIcon.setImageResource(listItem.getStatIconId());
     }
     @Override
     public int getItemCount() {

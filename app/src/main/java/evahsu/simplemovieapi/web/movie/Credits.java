@@ -8,8 +8,8 @@ import java.util.List;
  */
 
 public class Credits {
-    public ArrayList<Cast> cast = null;
-    public ArrayList<Crew> crew = null;
+    private ArrayList<Cast> cast = null;
+    private ArrayList<Crew> crew = null;
 
     public ArrayList<Cast> getCast() {
         return cast;
