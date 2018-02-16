@@ -7,4 +7,5 @@
     <string name="runtime_unavailable">片長: NA</string>
     <string name="rate">評比: %1$s</string>
     <string name="no_more_to_load">已無更多資料可載入</string>
+    <string name="cast">演員</string>
 </resources>

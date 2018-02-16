@@ -2,7 +2,11 @@ package evahsu.simplemovieapi.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +19,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import evahsu.simplemovieapi.R;
 import evahsu.simplemovieapi.debug.LogHelper;
+import evahsu.simplemovieapi.intf.ObjectKeyRecyclerViewListener;
 import evahsu.simplemovieapi.uicomponent.flowtag.FlowTagLayout;
 import evahsu.simplemovieapi.uicomponent.flowtag.OnTagSelectListener;
 import evahsu.simplemovieapi.util.Constants;
@@ -23,8 +28,10 @@ import evahsu.simplemovieapi.util.WebUtil;
 import evahsu.simplemovieapi.web.ObserverOnNextListener;
 import evahsu.simplemovieapi.web.ProgressObserver;
 import evahsu.simplemovieapi.web.RequestInterface;
+import evahsu.simplemovieapi.web.movie.Cast;
 import evahsu.simplemovieapi.web.movie.MovieDetailResponse;
 import evahsu.simplemovieapi.web.movie.MovieDiscoverResponse;
+import evahsu.simplemovieapi.web.movie.Result;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
@@ -39,16 +46,21 @@ public class MovieDetailActivity extends AppCompatActivity {
     @BindView(R.id.movie_detail_runtime) TextView tvRunTime;
     @BindView(R.id.movie_detail_vote_average) TextView tvRate;
     @BindView(R.id.movie_detail_overview) TextView tvOverView;
+    @BindView(R.id.movie_detail_cast_label) TextView tvCastLabel;
     @BindView(R.id.state_block1_oil_green_line) ImageView ivRateLine;
+    @BindView(R.id.movie_detail_cast_list) RecyclerView rcCastList;
     private TagAdapter tagAdapter;
+    private CastAdapter castAdapter;
     private GetMovieDetailObserverListener getMovieDetailObserverListener = new GetMovieDetailObserverListener();
+    private InnerObjectKeyRecyclerViewListener innerObjectKeyRecyclerViewListener = new InnerObjectKeyRecyclerViewListener();
 //    @BindView(R.id.movie_detail_runtime) ImageView ivPoster;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_detail);
         ButterKnife.bind(this);
-        initFlowTagLayout();
+        initFlowTagLayout();//genres
+        initRecyclerView();//cast
         if(getIntent() != null && getIntent().getExtras() != null){
             getMovieDetail(getIntent().getExtras().getInt(Constants.EXTRA_MOVID_ID));
         }
@@ -58,12 +70,23 @@ public class MovieDetailActivity extends AppCompatActivity {
 
         flowTagGenres.setTagCheckedMode(FlowTagLayout.FLOW_TAG_CHECKED_NONE);
         flowTagGenres.setAdapter(tagAdapter);
-        flowTagGenres.setOnTagSelectListener(new OnTagSelectListener() {
-            @Override
-            public void onItemSelect(FlowTagLayout parent, List<Integer> selectedList) {
+//        flowTagGenres.setOnTagSelectListener(new OnTagSelectListener() {
+//            @Override
+//            public void onItemSelect(FlowTagLayout parent, List<Integer> selectedList) {
+//
+//            }
+//        });
+    }
 
-            }
-        });
+    private void initRecyclerView(){
+        castAdapter = new CastAdapter(getApplicationContext());
+        castAdapter.setRecyclerViewListener(innerObjectKeyRecyclerViewListener);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getApplicationContext(), 3, GridLayoutManager.VERTICAL, false);
+        rcCastList.setLayoutManager(gridLayoutManager);
+        rcCastList.setItemAnimator(new DefaultItemAnimator());
+        rcCastList.setHasFixedSize(true);
+        rcCastList.setLayoutManager(gridLayoutManager);
+        rcCastList.setAdapter(castAdapter);
     }
 
     private void getMovieDetail(int id){
@@ -114,6 +137,14 @@ public class MovieDetailActivity extends AppCompatActivity {
                 ivRateLine.getLayoutParams().width = (int)(px * resp.getVote_average() / 10);
                 tagAdapter.onlyAddAll(resp.getGenres());
                 tagAdapter.notifyDataSetChanged();
+                if(resp.getCredits().cast.isEmpty()){
+                    tvCastLabel.setText("");
+                    castAdapter.clearData();
+                }else{
+                    tvCastLabel.setText(R.string.cast);
+                    castAdapter.setData(resp.getCredits().getCast());
+                }
+                castAdapter.notifyDataSetChanged();
 
             }catch (Exception e){
                 Util.showShortToast(getBaseContext(),R.string.system_is_busy);
@@ -128,5 +159,18 @@ public class MovieDetailActivity extends AppCompatActivity {
         }
 
 
+    }
+    class InnerObjectKeyRecyclerViewListener implements ObjectKeyRecyclerViewListener {
+
+        @Override
+        public void onItemClick(int key, Object bean) {
+        }
+
+        @Override
+        public boolean onItemLongClick(int key, Object bean) {
+//            DialogHandler.showAlertDialog(getActivity(),simpleListItem.getContent(),null);
+//            LuxgenUtils.showShortToast(getContext(),String.format("%s long clicked",simpleListItem.getTitle()));
+            return true;
+        }
     }
 }

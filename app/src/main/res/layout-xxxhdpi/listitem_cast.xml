@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listitem_cast_rootview"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/listitem_message_first_icon_margin_left"
+    android:layout_height="@dimen/cast_list_item_height">
+
+    <ImageView
+        android:id="@+id/cast_list_img"
+        android:layout_width="@dimen/detail_movie_genres_width"
+        android:layout_height="@dimen/detail_movie_genres_height"
+        />
+
+    <TextView
+        android:id="@+id/cast_list_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/message_unread_title_margin_top"
+        android:maxLines="3"
+        android:ellipsize="end"
+        style="@style/ListItemText12Style"/>
+    <TextView
+        android:id="@+id/cast_list_character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/list_cast_char_margin_top"
+        style="@style/ListItemText10Style"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:layout_below="@+id/movie_list_title"/>
+</LinearLayout>

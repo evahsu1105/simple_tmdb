@@ -95,4 +95,22 @@
         android:layout_marginTop="@dimen/message_unread_title_margin_top"
         android:layout_below="@+id/movie_detail_img"
         style="@style/ListItemText12Style"/>
+
+    <TextView
+        android:id="@+id/movie_detail_cast_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/message_unread_title_margin_top"
+        android:layout_below="@+id/movie_detail_overview"
+        style="@style/ListItemText12Style"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/movie_detail_cast_list"
+        android:scrollbars="vertical"
+        android:layout_marginTop="@dimen/message_unread_title_margin_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/movie_detail_cast_label">
+    </android.support.v7.widget.RecyclerView>
 </RelativeLayout>

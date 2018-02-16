@@ -10,4 +10,5 @@
     <string name="runtime_unavailable">Duration: NA</string>
     <string name="rate">Rate: %1$s</string>
     <string name="no_more_to_load">No more data to load</string>
+    <string name="cast">Cast</string>
 </resources>

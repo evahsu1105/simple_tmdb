@@ -1,5 +1,6 @@
 package evahsu.simplemovieapi.web.movie;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,6 +8,22 @@ import java.util.List;
  */
 
 public class Credits {
-    public List<Cast> cast = null;
-    public List<Crew> crew = null;
+    public ArrayList<Cast> cast = null;
+    public ArrayList<Crew> crew = null;
+
+    public ArrayList<Cast> getCast() {
+        return cast;
+    }
+
+    public void setCast(ArrayList<Cast> cast) {
+        this.cast = cast;
+    }
+
+    public ArrayList<Crew> getCrew() {
+        return crew;
+    }
+
+    public void setCrew(ArrayList<Crew> crew) {
+        this.crew = crew;
+    }
 }

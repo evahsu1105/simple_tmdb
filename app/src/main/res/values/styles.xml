@@ -12,6 +12,10 @@
         <item name="android:textColor">@color/white1</item>
         <item name="android:textSize">@dimen/text_size_12</item>
     </style>
+    <style name="ListItemText10Style">
+        <item name="android:textColor">@color/white1</item>
+        <item name="android:textSize">@dimen/text_size_10</item>
+    </style>
 
     <style name="ListItemText15Style">
         <item name="android:textColor">@color/white1</item>
