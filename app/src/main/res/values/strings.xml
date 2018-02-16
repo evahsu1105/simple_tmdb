@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TMDB</string>
+
+
+    <string name="internet_loss">Network is unavailable</string>
+    <string name="system_is_busy">System is busy, please try again.</string>
+    <string name="progress_loading">Loading</string>
+    <string name="release_date">Release Date: %1$s</string>
+    <string name="runtime">Duration: %1$s minutes</string>
+    <string name="runtime_unavailable">Duration: NA</string>
+    <string name="rate">Rate: %1$s</string>
+    <string name="no_more_to_load">No more data to load</string>
+</resources>

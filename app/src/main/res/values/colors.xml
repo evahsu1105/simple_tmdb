@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="selector_item_color">#00eea0</color>
+
+    <color name="white">#fff</color>
+
+    <color name="transparent">#00000000</color>
+    <!-- old-->
+    <color name="white1">#FFFFFF</color>
+    <color name="white2">#F4F4F4</color>
+    <color name="whiteE0">#E0E0E0</color>
+    <color name="whiteA8">#A8A8A8</color>
+    <color name="whiteD1">#D1D1D1</color>
+    <color name="whiteD103">#4DD1D1D1</color>
+    <color name="whiteBF">#BFBFBF</color>
+    <color name="white55">#8C000000</color>
+    <color name="black07">#B3000000</color>
+    <color name="black21">#212121</color>
+    <color name="red_alert">#E32525</color>
+
+    <color name="colorPrimary">#2C2C2C</color>
+    <color name="colorPrimaryDark">#2C2C2C</color>
+    <color name="colorAccent">#009688</color>
+    <color name="colorAccent_alpha">#8fff4081</color>
+    <color name="green">#03682f</color>
+    <color name="toolbar_bg">#ffffff</color>
+    <color name="toolbar_shadow">#88a7a7a7</color>
+    <color name="toolbar_text_color">#000000</color>
+
+    <color name="black">#1E2835</color>
+    <color name="white3">#99F4F4F4</color><!--alpha 60-->
+    <color name="white4">#FAFAFA</color>
+    <color name="white5">#4DBDBDBD</color><!--alpha 40-->
+    <color name="white6">#4DF4F4F4</color><!--alpha 30 3,6-->
+    <color name="white7">#0DF4F4F4</color><!--alpha 5-->
+    <color name="white8">#9B9B9B</color><!--alpha -->
+    <color name="white9">#535F6F</color><!--alpha-->
+    <color name="white_line">#F4F4F4</color><!--alpha-->
+    <color name="white_time_text">#4B4E4F</color><!--alpha-->
+    <color name="state_gray_line">#8E979A</color><!--alpha-->
+    <color name="home_date_white">#F2F2F2</color><!--alpha-->
+    <color name="black1">#545F61</color>
+    <color name="black2">#2C3745</color>
+    <color name="black3">#1E2835</color>
+    <color name="black4">#131922</color>
+    <color name="black5">#303E4c</color>
+    <color name="black_edit_bg">#535F6F</color>
+    <color name="black_edit_bg_pressed">#4D535F6F</color>
+    <color name="blue1">#0E98F2</color>
+    <color name="blue2">#4D0E98F2</color>
+    <color name="blue3">#0FB1CF</color>
+    <color name="blue4">#4D0FB1CF</color>
+    <color name="blue5">#2F90BD</color>
+    <color name="blue_block1">#28A7DA</color>
+    <color name="blue_block1_pressed">#167CA5</color>
+    <color name="blue_block2">#103D4F</color>
+    <color name="blue_block2_pressed">#022D3E</color>
+    <color name="start_green">#00A4BF</color>
+    <color name="end_green">#17E1C1</color>
+    <color name="orange1">#F66023</color>
+    <color name="orange2">#B3F56023</color><!--alpha 70 1,2-->
+    <color name="orange3">#F76B33</color>
+    <color name="red1">#E92B2B</color>
+    <color name="divider_gray">#C8C7CC</color>
+    <color name="bt_bg_gray">#303E4C</color>
+    <color name="ol1">#747474</color>
+    <color name="ol2">#3e4043</color>
+    <color name="ol3">#323335</color>
+    <!--alpha   0% – 00
+                    5% – 0D
+                    10% – 1A
+                    15% – 26
+                    20% – 33
+                    25% – 40
+                    30% – 4D
+                    35% – 49
+                    40% – 66
+                    45% – 73
+                    50% – 80
+                    55% – 8C
+                    60% – 99
+                    65% – A6
+                    70% – B3
+                    75% – BF
+                    80% – CC
+                    85% – D9
+                    90% – E6
+                    95% – F2
+                    100% – FF
+        -->
+
+    <!-- Ricky 2017.12.23 路況相關 -->
+    <color name="realtime_road_bg">#eaeaea</color>
+    <color name="realtime_road_subtitle">#535353</color>
+    <color name="realtime_road_line">#9d9d9d</color>
+    <color name="realtime_road_list_bg">#313131</color>
+    <color name="road_line_yellow">#ffff88</color>
+    <color name="road_line_level1">#87cd52</color>
+    <color name="road_line_level2">#e67500</color>
+    <color name="road_line_level3">#d70000</color>
+    <color name="road_line_level4">#780000</color>
+    <color name="road_line_point">#777777</color>
+
+    <color name="landing_word">#666666</color>
+    <color name="landing_bg">#ffffff</color>
+</resources>

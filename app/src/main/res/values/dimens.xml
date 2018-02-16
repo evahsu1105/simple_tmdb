@@ -1,0 +1,154 @@
+<resources>
+    <dimen name="login_logo_margin_top">55dp</dimen>
+    <dimen name="login_account_label_margin_top">48dp</dimen>
+    <dimen name="login_button_width">256dp</dimen>
+    <dimen name="login_button_heigh">434dp</dimen>
+    <dimen name="login_edittext_margin_top">5dp</dimen>
+    <dimen name="login_edittext_lable_margin_left">3dp</dimen>
+    <dimen name="login_id_label_margin_top">72dp</dimen>
+    <dimen name="register_id_label_margin_top">31dp</dimen>
+    <dimen name="login_other_label_margin_top">9dp</dimen>
+    <dimen name="login_foot_button_heigh">60dp</dimen>
+    <dimen name="main_black_button_width">261dp</dimen>
+    <dimen name="main_black_button_heigh">46dp</dimen>
+    <dimen name="login_main_black_button_heigh">46dp</dimen>
+    <dimen name="register_main_black_button_height">72dp</dimen>
+    <item name="letter_spacing" format="float" type="dimen">0.088</item>
+
+    <item name="id_max_length" format="integer" type="dimen">10</item>
+    <item name="car_no_max_length" format="integer" type="dimen">9</item>
+    <item name="password_max_length" format="integer" type="dimen">12</item>
+    <item name="phone_max_length" format="integer" type="dimen">10</item>
+    <item name="sms_max_length" format="integer" type="dimen">12</item>
+    <dimen name="alert_dot_width">20dp</dimen>
+    <dimen name="home_alert_dot_left_margin">6dp</dimen>
+    <dimen name="home_alert_dot_top_margin">5dp</dimen>
+    <dimen name="left_floating_dot_left_margin">50dp</dimen>
+    <dimen name="left_floating_dot_text_left_margin">51dp</dimen>
+    <dimen name="left_floating_dot_top_margin">8dp</dimen>
+    <dimen name="dot_text_top_margin">9dp</dimen>
+
+    <item name="letter_spacing8" format="float" type="dimen">0.08</item>
+    <item name="main_black_button_letter_spacing" format="float" type="dimen">0.115</item>
+    <item name="foot_button_letter_spacing" format="float" type="dimen">0.125</item>
+    <dimen name="forgot_password_text_width">270dp</dimen>
+    <dimen name="forgot_password_text_margin_top">17dp</dimen>
+    <dimen name="forgot_password_id_label_margin_top">87dp</dimen>
+    <dimen name="forgot_password_main_black_button_height">93dp</dimen>
+    <dimen name="done_page_check_width">50dp</dimen>
+    <dimen name="done_message1_margin_top">193dp</dimen>
+    <dimen name="done_message2_margin_top">40dp</dimen>
+    <dimen name="done_center_margin_bottom">30dp</dimen>
+    <dimen name="register_phone_title_margin_top">69dp</dimen>
+    <dimen name="register_phone_label_margin_top">31dp</dimen>
+    <dimen name="register_phone_main_black_button_margin_top">66dp</dimen>
+    <dimen name="register_sms_title_margin_top">52dp</dimen>
+    <dimen name="register_sms_title2_margin_top">40dp</dimen>
+    <dimen name="register_sms_main_black_button_height">38dp</dimen>
+    <dimen name="resend_sms_margin_top">27dp</dimen>
+    <dimen name="password_main_black_button_margin_top">76dp</dimen>
+    <dimen name="home_logo_height">35dp</dimen>
+    <dimen name="home_top_ll_height">56dp</dimen>
+    <dimen name="home_setting_icon_width">32dp</dimen>
+    <dimen name="home_setting_icon_right_margin">20dp</dimen>
+    <dimen name="circle_item_width">61dp</dimen>
+    <dimen name="in_app_item_width">61dp</dimen>
+    <dimen name="in_app_center_item_width">64dp</dimen>
+    <dimen name="floating_center_item_width">68dp</dimen>
+    <dimen name="circle_item_elevation">2dp</dimen>
+    <dimen name="floating_marker_width">70dp</dimen>
+    <dimen name="title_bar_heigh">56dp</dimen>
+    <dimen name="title_bar_back_touch_width">56dp</dimen>
+    <dimen name="title_bar_back_icon_width">24dp</dimen>
+    <dimen name="title_bar_text2_margin_left">16dp</dimen>
+    <dimen name="setting_main_item_height">91dp</dimen>
+    <dimen name="main_item_margin_left">27dp</dimen>
+    <dimen name="main_item_indicator_margin_right">18dp</dimen>
+    <dimen name="main_item_label_margin_top">21dp</dimen>
+    <dimen name="main_item_input_margin_top">9dp</dimen>
+    <dimen name="setting_password_btn_margin_top">77dp</dimen>
+    <dimen name="setting_password_btn_margin_width">164dp</dimen>
+    <dimen name="setting_password_btn_margin_height">38dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="circle_item_margin">5dp</dimen>
+
+
+
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_9">9sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="home_widget_elevation">10dp</dimen>
+
+    <dimen name="dialog_width">280dp</dimen>
+    <dimen name="dialog_heigh">150dp</dimen>
+    <dimen name="dialog_button_heigh">50.9dp</dimen>
+    <dimen name="dialog_line1_margin_top">27dp</dimen>
+    <dimen name="dialog_line2_margin_top">11dp</dimen>
+    <dimen name="dialog_text_margin_left">5dp</dimen>
+    <dimen name="dialog_text_margin_right">0dp</dimen>
+    <dimen name="dialog_1text_min_heigh">99dp</dimen>
+
+    <dimen name="line_spacing">5dp</dimen>
+    <dimen name="login_button1_margin_top">36dp</dimen>
+    <dimen name="login_button2_margin_top">15dp</dimen>
+    <dimen name="login_edittext_padding_bottom">14dp</dimen>
+
+
+    <dimen name="top_back_icon_touch_width">55dp</dimen>
+    <dimen name="top_back_icon_touch_height">81dp</dimen>
+    <dimen name="top_back_icon_width">27dp</dimen>
+    <dimen name="top_back_icon_margin_top">21dp</dimen>
+    <dimen name="top_back_icon_margin_left">16dp</dimen>
+
+    <dimen name="forgot_password_edittext_margin_top">76dp</dimen>
+    <dimen name="forgot_password_button_margin_top">90dp</dimen>
+
+    <dimen name="verify_phone_spacing_heigh">130dp</dimen>
+    <dimen name="verify_phone_text1_margin_top">-42dp</dimen>
+    <dimen name="verify_phone_text2_margin_top">12dp</dimen>
+    <dimen name="verify_phone_editext_margin_top">10dp</dimen>
+    <dimen name="verify_phone_text4_margin_top">34dp</dimen>
+
+    <dimen name="detail_movie_genres_height">60dp</dimen>
+    <dimen name="detail_movie_img_width">120dp</dimen>
+    <dimen name="detail_movie_img_heigh">180dp</dimen>
+    <dimen name="message_unread_icon_width">64dp</dimen>
+    <dimen name="message_unread_icon_margin_top">14dp</dimen>
+    <dimen name="listitem_message_first_icon_margin_left">15dp</dimen>
+    <dimen name="listitem_message_second_icon_margin_left">5dp</dimen>
+    <dimen name="message_unread_text_margin_left">8dp</dimen>
+    <dimen name="message_unread_title_margin_top">10dp</dimen>
+    <dimen name="list_movie_overview_margin_top">6dp</dimen>
+    <dimen name="message_unread_date_margin_top">12dp</dimen>
+
+    <dimen name="action_bar_icon_width">30dp</dimen>
+    <dimen name="action_bar_icon_margin_right">43dp</dimen>
+    <dimen name="action_text_width">204dp</dimen>
+    <dimen name="action_bar_options_margin_right">11dp</dimen>
+    <dimen name="message_select_icon_margin_left">15dp</dimen>
+    <dimen name="message_list_empty_text_margin_top">34dp</dimen>
+    <dimen name="message_detail_title_margin_top">16dp</dimen>
+    <dimen name="message_detail_text_margin_left">30dp</dimen>
+    <dimen name="message_detail_date_margin_top">16dp</dimen>
+    <dimen name="message_detail_content_margin_top">25dp</dimen>
+    <dimen name="line_spacing_extra">4dp</dimen>
+    <dimen name="line_height">1dp</dimen>
+    <dimen name="line_margin_top">15dp</dimen>
+
+
+    <dimen name="state_oil_line_margin_top">16dp</dimen>
+    <dimen name="state_oil_line_width">105.3dp</dimen>
+    <dimen name="state_oil_line_width_tmp">80.3dp</dimen>
+    <dimen name="state_oil_line_height">4.4dp</dimen>
+    <dimen name="state_oil_text_margin_top">8.6dp</dimen>
+    <dimen name="state_oil_text_margin_left">20dp</dimen>
+    <dimen name="line_round">200dp</dimen>
+</resources>

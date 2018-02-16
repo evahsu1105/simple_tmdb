@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listitem_movie_rootview"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@drawable/pressed_setting_main_item_bg"
+    android:layout_height="@dimen/setting_main_item_height">
+
+    <ImageView
+        android:id="@+id/movie_list_img"
+        android:layout_width="@dimen/message_unread_icon_width"
+        android:layout_height="@dimen/message_unread_icon_width"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/listitem_message_first_icon_margin_left"
+        android:layout_marginTop="@dimen/message_unread_title_margin_top"
+        android:layout_marginBottom="@dimen/message_unread_title_margin_top"
+        />
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/message_unread_text_margin_left"
+        android:layout_marginRight="@dimen/message_unread_text_margin_left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/movie_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/message_unread_title_margin_top"
+            android:maxLines="1"
+            android:ellipsize="end"
+            style="@style/ListItemText15Style"/>
+        <TextView
+            android:id="@+id/movie_list_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/message_unread_title_margin_top"
+            style="@style/ListItemText12Style"/>
+        <TextView
+            android:id="@+id/movie_list_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/list_movie_overview_margin_top"
+            style="@style/ListItemText12Style"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_below="@+id/movie_list_title"/>
+    </RelativeLayout>
+</LinearLayout>

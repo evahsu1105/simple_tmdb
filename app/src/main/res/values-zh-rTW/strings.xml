@@ -1,0 +1,10 @@
+<resources>
+    <string name="internet_loss">目前無網路連線</string>
+    <string name="system_is_busy">系統忙碌中，請稍後再試</string>
+    <string name="progress_loading">載入中</string>
+    <string name="release_date">發行日期: %1$s</string>
+    <string name="runtime">片長: %1$s 分鐘</string>
+    <string name="runtime_unavailable">片長: NA</string>
+    <string name="rate">評比: %1$s</string>
+    <string name="no_more_to_load">已無更多資料可載入</string>
+</resources>
